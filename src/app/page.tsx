@@ -7,5 +7,5 @@ export default function Home() {
     <div>
       <Button>Click me</Button>
     </div>
-  )
+  );
 }
