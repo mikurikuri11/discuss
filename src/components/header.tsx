@@ -45,7 +45,7 @@ export default async function Header() {
         </NavbarItem>
 
         <NavbarItem>
-          <form action={actions.signOut}>
+          <form action={actions.signIn}>
             <Button type="submit" color="primary" variant="flat">
               Sign Up
             </Button>
