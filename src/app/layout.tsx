@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Providers from "@/app/providers";
 import Header from "@/components/header";
+import { SessionProvider } from "next-auth/react";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,8 +18,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="container mx-auto px-4 max-w-6xl">
-          <Header />
-          <Providers>{children}</Providers>
+          <SessionProvider>
+            <Header />
+            <Providers>{children}</Providers>
+          </SessionProvider>
         </div>
       </body>
     </html>
